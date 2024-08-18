@@ -11,22 +11,52 @@ struct MealsView: View {
     @State var viewModel: MealsViewModelProtocol
     
     var body: some View {
-        Group {
-            VStack {
-                ForEach(viewModel.meals.meals, id: \.self) { meal in
-                    MealCellView(meal)
-                }
-            }
+        NavigationStack {
+            HeaderView()
+            
+            BodyView()
         }
         .task {
             await viewModel.fetchDessert()
         }
     }
     
+    // MARK: Sub views
+    @ViewBuilder
+    func BodyView() -> some View {
+        ScrollView {
+            LazyVStack(spacing: 0) {
+                ForEach(viewModel.meals.meals, id: \.self) { meal in
+                    MealCellView(meal)
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func HeaderView() -> some View {
+        Text("Desserts")
+            .font(.title)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .padding()
+    }
+    
     @ViewBuilder
     func MealCellView(_ meal: Meal) -> some View {
-        VStack {
-            Text(meal.strMeal)
+        VStack(spacing: 0) {
+            HStack {
+                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Image(systemName: "carrot")
+                }
+                .frame(width: 75, height: 75)
+                
+                Text(meal.strMeal)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            
+            Divider()
         }
     }
 }
