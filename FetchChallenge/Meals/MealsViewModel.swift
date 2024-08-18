@@ -7,8 +7,15 @@
 
 import Foundation
 
+protocol MealsViewModelProtocol {
+    var mealService: MealServiceProtocol { get }
+    var meals: Meals { get set }
+    
+    func fetchDessert() async
+}
 
-class MealsViewModel {
+@Observable
+class MealsViewModel: MealsViewModelProtocol {
     let mealService: MealServiceProtocol
     var meals: Meals
     

@@ -9,14 +9,14 @@ import Foundation
 
 protocol MealServiceProtocol {
     func fetchMeals(for catagory: MealCategory) async -> Meals
-    func fetchMealDetail(for id: String) async -> MealDetail
+    func fetchMealDetails(for id: String) async -> MealDetail
 }
 
 enum MealCategory: String {
     case dessert = "Dessert"
 }
 
-class MealService {
+class MealService: MealServiceProtocol {
     private let APIService: APIServiceProtocol
     
     init(APIService: APIServiceProtocol) {
@@ -32,6 +32,7 @@ class MealService {
             meals = try JSONDecoder().decode(Meals.self, from: data)
         } catch let error {
             // TODO: Handle error
+            print(error)
         }
         
         return meals

@@ -15,7 +15,7 @@ enum NetworkError: Error {
     case badURL
 }
 
-class APIService {
+class APIService: APIServiceProtocol {
     
     func performDataRequest(for url: URL) async throws -> Data {
         let request = URLRequest(url: url)

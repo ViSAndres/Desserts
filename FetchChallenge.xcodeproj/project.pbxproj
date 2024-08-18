@@ -20,6 +20,9 @@
 		FCD23C542C7182A900B53147 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C532C7182A900B53147 /* MealService.swift */; };
 		FCD23C572C7185AB00B53147 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C562C7185AB00B53147 /* Meals.swift */; };
 		FCD23C592C723F2900B53147 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C582C723F2900B53147 /* MealDetail.swift */; };
+		FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */; };
+		FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C5E2C72883500B53147 /* MockMealService.swift */; };
+		FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C612C728E3500B53147 /* MockMealsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		FCD23C532C7182A900B53147 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		FCD23C562C7185AB00B53147 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		FCD23C582C723F2900B53147 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsViewModel.swift; sourceTree = "<group>"; };
+		FCD23C5E2C72883500B53147 /* MockMealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealService.swift; sourceTree = "<group>"; };
+		FCD23C612C728E3500B53147 /* MockMealsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		FCD23C202C7173C900B53147 /* FetchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C5B2C72874000B53147 /* Mock */,
 				FCD23C552C71853B00B53147 /* Models */,
 				FCD23C502C71781B00B53147 /* Services */,
 				FCD23C4B2C71747100B53147 /* Meals */,
@@ -167,6 +174,24 @@
 				FCD23C582C723F2900B53147 /* MealDetail.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FCD23C5B2C72874000B53147 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C602C728E0400B53147 /* APIResponses */,
+				FCD23C5E2C72883500B53147 /* MockMealService.swift */,
+				FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		FCD23C602C728E0400B53147 /* APIResponses */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C612C728E3500B53147 /* MockMealsData.swift */,
+			);
+			path = APIResponses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */,
+				FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */,
+				FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */,
 				FCD23C242C7173C900B53147 /* ContentView.swift in Sources */,
 				FCD23C522C71791B00B53147 /* APIService.swift in Sources */,
 				FCD23C542C7182A900B53147 /* MealService.swift in Sources */,

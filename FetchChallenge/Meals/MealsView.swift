@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct MealsView: View {
+    @State var viewModel: MealsViewModelProtocol
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            VStack {
+                ForEach(viewModel.meals.meals, id: \.self) { meal in
+                    MealCellView(meal)
+                }
+            }
+        }
+        .task {
+            await viewModel.fetchDessert()
+        }
+    }
+    
+    @ViewBuilder
+    func MealCellView(_ meal: Meal) -> some View {
+        VStack {
+            Text(meal.strMeal)
+        }
     }
 }
 
+
+
 #Preview {
-    MealsView()
+    MealsView(viewModel: MockMealsViewModel())
 }
