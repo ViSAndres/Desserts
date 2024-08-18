@@ -14,6 +14,9 @@
 		FCD23C332C7173CA00B53147 /* FetchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C322C7173CA00B53147 /* FetchChallengeTests.swift */; };
 		FCD23C3D2C7173CA00B53147 /* FetchChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C3C2C7173CA00B53147 /* FetchChallengeUITests.swift */; };
 		FCD23C3F2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */; };
+		FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4C2C7177BB00B53147 /* MealsView.swift */; };
+		FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */; };
+		FCD23C522C71791B00B53147 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C512C71791B00B53147 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FCD23C382C7173CA00B53147 /* FetchChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD23C3C2C7173CA00B53147 /* FetchChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITests.swift; sourceTree = "<group>"; };
 		FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCD23C4C2C7177BB00B53147 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
+		FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
+		FCD23C512C71791B00B53147 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		FCD23C202C7173C900B53147 /* FetchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C502C71781B00B53147 /* Services */,
+				FCD23C4B2C71747100B53147 /* Meals */,
 				FCD23C212C7173C900B53147 /* FetchChallengeApp.swift */,
 				FCD23C232C7173C900B53147 /* ContentView.swift */,
 				FCD23C252C7173CA00B53147 /* Assets.xcassets */,
@@ -125,6 +133,23 @@
 				FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */,
 			);
 			path = FetchChallengeUITests;
+			sourceTree = "<group>";
+		};
+		FCD23C4B2C71747100B53147 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C4C2C7177BB00B53147 /* MealsView.swift */,
+				FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		FCD23C502C71781B00B53147 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C512C71791B00B53147 /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD23C242C7173C900B53147 /* ContentView.swift in Sources */,
+				FCD23C522C71791B00B53147 /* APIService.swift in Sources */,
+				FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */,
 				FCD23C222C7173C900B53147 /* FetchChallengeApp.swift in Sources */,
+				FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
