@@ -9,5 +9,15 @@ import Foundation
 
 
 class MealsViewModel {
+    let mealService: MealServiceProtocol
+    var meals: Meals
     
+    init(mealService: MealServiceProtocol, meals: Meals = Meals(meals: [])) {
+        self.mealService = mealService
+        self.meals = meals
+    }
+    
+    func fetchDessert() async {
+        meals = await mealService.fetchMeals(for: .dessert)
+    }
 }
