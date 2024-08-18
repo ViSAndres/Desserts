@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol APIServiceProtocol {
+    func performDataRequest(for url: URL) async throws -> Data
+}
+
 enum NetworkError: Error {
     case badURL
 }

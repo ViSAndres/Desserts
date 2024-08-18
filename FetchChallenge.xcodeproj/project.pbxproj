@@ -17,6 +17,8 @@
 		FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4C2C7177BB00B53147 /* MealsView.swift */; };
 		FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */; };
 		FCD23C522C71791B00B53147 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C512C71791B00B53147 /* APIService.swift */; };
+		FCD23C542C7182A900B53147 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C532C7182A900B53147 /* MealService.swift */; };
+		FCD23C572C7185AB00B53147 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C562C7185AB00B53147 /* Meals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		FCD23C4C2C7177BB00B53147 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		FCD23C512C71791B00B53147 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FCD23C532C7182A900B53147 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		FCD23C562C7185AB00B53147 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		FCD23C202C7173C900B53147 /* FetchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C552C71853B00B53147 /* Models */,
 				FCD23C502C71781B00B53147 /* Services */,
 				FCD23C4B2C71747100B53147 /* Meals */,
 				FCD23C212C7173C900B53147 /* FetchChallengeApp.swift */,
@@ -148,8 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				FCD23C512C71791B00B53147 /* APIService.swift */,
+				FCD23C532C7182A900B53147 /* MealService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FCD23C552C71853B00B53147 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C562C7185AB00B53147 /* Meals.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +298,10 @@
 			files = (
 				FCD23C242C7173C900B53147 /* ContentView.swift in Sources */,
 				FCD23C522C71791B00B53147 /* APIService.swift in Sources */,
+				FCD23C542C7182A900B53147 /* MealService.swift in Sources */,
 				FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */,
 				FCD23C222C7173C900B53147 /* FetchChallengeApp.swift in Sources */,
+				FCD23C572C7185AB00B53147 /* Meals.swift in Sources */,
 				FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
