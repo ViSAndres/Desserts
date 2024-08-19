@@ -19,10 +19,12 @@
 		FCD23C522C71791B00B53147 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C512C71791B00B53147 /* APIService.swift */; };
 		FCD23C542C7182A900B53147 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C532C7182A900B53147 /* MealService.swift */; };
 		FCD23C572C7185AB00B53147 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C562C7185AB00B53147 /* Meals.swift */; };
-		FCD23C592C723F2900B53147 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C582C723F2900B53147 /* MealDetail.swift */; };
+		FCD23C592C723F2900B53147 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C582C723F2900B53147 /* MealDetails.swift */; };
 		FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */; };
 		FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C5E2C72883500B53147 /* MockMealService.swift */; };
 		FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C612C728E3500B53147 /* MockMealsData.swift */; };
+		FCD23C642C72D3E600B53147 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C632C72D3E600B53147 /* MealDetailView.swift */; };
+		FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C652C72D46200B53147 /* MockMealDetailData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +60,12 @@
 		FCD23C512C71791B00B53147 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FCD23C532C7182A900B53147 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		FCD23C562C7185AB00B53147 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
-		FCD23C582C723F2900B53147 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		FCD23C582C723F2900B53147 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsViewModel.swift; sourceTree = "<group>"; };
 		FCD23C5E2C72883500B53147 /* MockMealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealService.swift; sourceTree = "<group>"; };
 		FCD23C612C728E3500B53147 /* MockMealsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsData.swift; sourceTree = "<group>"; };
+		FCD23C632C72D3E600B53147 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		FCD23C652C72D46200B53147 /* MockMealDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealDetailData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		FCD23C4B2C71747100B53147 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C632C72D3E600B53147 /* MealDetailView.swift */,
 				FCD23C4C2C7177BB00B53147 /* MealsView.swift */,
 				FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */,
 			);
@@ -171,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD23C562C7185AB00B53147 /* Meals.swift */,
-				FCD23C582C723F2900B53147 /* MealDetail.swift */,
+				FCD23C582C723F2900B53147 /* MealDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD23C612C728E3500B53147 /* MockMealsData.swift */,
+				FCD23C652C72D46200B53147 /* MockMealDetailData.swift */,
 			);
 			path = APIResponses;
 			sourceTree = "<group>";
@@ -324,15 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD23C642C72D3E600B53147 /* MealDetailView.swift in Sources */,
 				FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */,
 				FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */,
+				FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */,
 				FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */,
 				FCD23C242C7173C900B53147 /* ContentView.swift in Sources */,
 				FCD23C522C71791B00B53147 /* APIService.swift in Sources */,
 				FCD23C542C7182A900B53147 /* MealService.swift in Sources */,
 				FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */,
 				FCD23C222C7173C900B53147 /* FetchChallengeApp.swift in Sources */,
-				FCD23C592C723F2900B53147 /* MealDetail.swift in Sources */,
+				FCD23C592C723F2900B53147 /* MealDetails.swift in Sources */,
 				FCD23C572C7185AB00B53147 /* Meals.swift in Sources */,
 				FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */,
 			);

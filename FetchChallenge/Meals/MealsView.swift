@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MealsView: View {
     @State var viewModel: MealsViewModelProtocol
+    @State private var shouldNavigate: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -31,6 +32,9 @@ struct MealsView: View {
                 }
             }
         }
+        .navigationDestination(isPresented: $shouldNavigate) {
+            MealDetailView(meal: viewModel.getCurrentMealDetails().meals[0])
+        }
     }
     
     @ViewBuilder
@@ -44,17 +48,24 @@ struct MealsView: View {
     @ViewBuilder
     func MealCellView(_ meal: Meal) -> some View {
         VStack(spacing: 0) {
-            HStack {
-                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                    image.resizable()
-                } placeholder: {
-                    Image(systemName: "carrot")
+            Button {
+                Task.init {
+                    await viewModel.fetchMealDetails(for: meal.idMeal)
+                    shouldNavigate.toggle()
                 }
-                .frame(width: 75, height: 75)
-                
-                Text(meal.strMeal)
+            } label: {
+                HStack {
+                    AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                        image.resizable()
+                    } placeholder: {
+                        Image(systemName: "carrot")
+                    }
+                    .frame(width: 75, height: 75)
+                    
+                    Text(meal.strMeal)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             
             Divider()
         }

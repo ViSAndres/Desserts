@@ -12,8 +12,8 @@ class MockMealService: MealServiceProtocol {
         return mockMeals()
     }
     
-    func fetchMealDetails(for id: String) async -> MealDetail {
-        return MealDetail(meals: [])
+    func fetchMealDetails(for id: String) async -> MealDetails {
+        return mockMealDetails()
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 
 protocol MealServiceProtocol {
     func fetchMeals(for catagory: MealCategory) async -> Meals
-    func fetchMealDetails(for id: String) async -> MealDetail
+    func fetchMealDetails(for id: String) async -> MealDetails
 }
 
 enum MealCategory: String {
@@ -38,14 +38,14 @@ class MealService: MealServiceProtocol {
         return meals
     }
     
-    func fetchMealDetails(for id: String) async -> MealDetail {
-        var mealDetail = MealDetail(meals: [])
+    func fetchMealDetails(for id: String) async -> MealDetails {
+        var mealDetail = MealDetails(meals: [])
         
         guard let url: URL = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(id)") else { return mealDetail }
         
         do {
             let data = try await APIService.performDataRequest(for: url)
-            mealDetail = try JSONDecoder().decode(MealDetail.self, from: data)
+            mealDetail = try JSONDecoder().decode(MealDetails.self, from: data)
         } catch let error {
             // TODO: Handle error
         }
