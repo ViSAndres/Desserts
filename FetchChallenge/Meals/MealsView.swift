@@ -13,9 +13,13 @@ struct MealsView: View {
     
     var body: some View {
         NavigationStack {
-            HeaderView()
-            
-            BodyView()
+            VStack(spacing: 0) {
+                HeaderView()
+                
+                BodyView()
+            }
+            .background(Color("LightGray", bundle: .main))
+
         }
         .task {
             await viewModel.fetchDessert()
@@ -25,10 +29,13 @@ struct MealsView: View {
     // MARK: Sub views
     @ViewBuilder
     func BodyView() -> some View {
+        let columns = [GridItem(.flexible()), GridItem(.flexible())]
+        
         ScrollView {
-            LazyVStack(spacing: 0) {
+            
+            LazyVGrid(columns: columns) {
                 ForEach(viewModel.meals.meals, id: \.self) { meal in
-                    MealCellView(meal)
+                        MealCellView(meal)
                 }
             }
         }
@@ -44,30 +51,35 @@ struct MealsView: View {
             .frame(maxWidth: .infinity, alignment: .topLeading)
             .padding()
     }
-    
+        
     @ViewBuilder
     func MealCellView(_ meal: Meal) -> some View {
-        VStack(spacing: 0) {
-            Button {
-                Task.init {
-                    await viewModel.fetchMealDetails(for: meal.idMeal)
-                    shouldNavigate.toggle()
-                }
-            } label: {
-                HStack {
-                    AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                        image.resizable()
-                    } placeholder: {
-                        Image(systemName: "carrot")
-                    }
-                    .frame(width: 75, height: 75)
-                    
-                    Text(meal.strMeal)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        Button {
+            Task.init {
+                await viewModel.fetchMealDetails(for: meal.idMeal)
+                shouldNavigate.toggle()
             }
-            
-            Divider()
+        } label: {
+            VStack(spacing: 0) {
+                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Image(systemName: "carrot")
+                }
+                .scaledToFit()
+                .frame(width: 150, height: 150)
+                .padding(.bottom, 10)
+                
+                Text(meal.strMeal)
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(.black)
+                    .padding(.horizontal, 5)
+                
+                Spacer()
+            }
+            .frame(width: 150, height: 225)
+            .background(.white)
+            .border(.gray, width: 0.5)
         }
     }
 }

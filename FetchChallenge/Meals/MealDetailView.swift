@@ -20,17 +20,16 @@ struct MealDetailView: View {
                     BodyView()
                 }
             }
-            .background(.gray)
+            .background(.white)
             .cornerRadius(16)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color(red: 0.12941176470588237, green: 0.16862745098039217, blue: 0.16470588235294117), lineWidth: 1)
+                    .stroke(Color("LightGray", bundle: .main), lineWidth: 1)
             )
             .padding(.horizontal, 20)
         }
         // TODO: Add colors to xcode
-        .background(Color(red: 0.12941176470588237, green: 0.16862745098039217, blue: 0.16470588235294117))
-//        .ignoresSafeArea()
+        .background(Color("LightGray", bundle: .main))
     }
     
     @ViewBuilder
