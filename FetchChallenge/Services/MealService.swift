@@ -8,8 +8,8 @@
 import Foundation
 
 protocol MealServiceProtocol {
-    func fetchMeals(for catagory: MealCategory) async -> Meals
-    func fetchMealDetails(for id: String) async -> MealDetails
+    func fetchMeals(for catagory: MealCategory) async throws -> Meals
+    func fetchMealDetails(for id: String) async throws -> MealDetails
 }
 
 enum MealCategory: String {
@@ -17,38 +17,29 @@ enum MealCategory: String {
 }
 
 class MealService: MealServiceProtocol {
-    private let APIService: APIServiceProtocol
+    private let APIService: APIService
     
-    init(APIService: APIServiceProtocol) {
+    init(APIService: APIService) {
         self.APIService = APIService
     }
     
-    func fetchMeals(for catagory: MealCategory) async -> Meals {
+    func fetchMeals(for catagory: MealCategory) async throws -> Meals {
         var meals = Meals(meals: [])
         guard let url: URL = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=\(catagory.rawValue)") else { return meals }
         
-        do {
-            let data = try await APIService.performDataRequest(for: url)
-            meals = try JSONDecoder().decode(Meals.self, from: data)
-        } catch let error {
-            // TODO: Handle error
-            print(error)
-        }
+        let data = try await APIService.performDataRequest(for: url)
+        meals = try JSONDecoder().decode(Meals.self, from: data)
         
         return meals
     }
     
-    func fetchMealDetails(for id: String) async -> MealDetails {
+    func fetchMealDetails(for id: String) async throws -> MealDetails {
         var mealDetail = MealDetails(meals: [])
         
         guard let url: URL = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(id)") else { return mealDetail }
         
-        do {
-            let data = try await APIService.performDataRequest(for: url)
-            mealDetail = try JSONDecoder().decode(MealDetails.self, from: data)
-        } catch let error {
-            // TODO: Handle error
-        }
+        let data = try await APIService.performDataRequest(for: url)
+        mealDetail = try JSONDecoder().decode(MealDetails.self, from: data)
         
         return mealDetail
     }

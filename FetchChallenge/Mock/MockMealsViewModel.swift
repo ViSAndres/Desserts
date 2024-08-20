@@ -8,17 +8,29 @@
 import Foundation
 
 public class MockMealsViewModel: MealsViewModelProtocol {
+    var error: Error?
+    
+    var hasError = false
+    
     var mealService: MealServiceProtocol = MockMealService()
     var meals = Meals(meals: [])
     
     private var currentMealDetails: MealDetails?
     
     func fetchDessert() async {
-        meals = await mealService.fetchMeals(for: .dessert)
+        do {
+            meals = try await mealService.fetchMeals(for: .dessert)
+        } catch {
+            
+        }
     }
     
     func fetchMealDetails(for mealID: String) async {
-        currentMealDetails = await mealService.fetchMealDetails(for: "123")
+        do {
+            currentMealDetails = try await mealService.fetchMealDetails(for: "123")
+        } catch {
+            
+        }
     }
     
     func getCurrentMealDetails() -> MealDetails {

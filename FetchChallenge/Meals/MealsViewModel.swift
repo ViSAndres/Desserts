@@ -10,6 +10,8 @@ import Foundation
 protocol MealsViewModelProtocol {
     var mealService: MealServiceProtocol { get }
     var meals: Meals { get set }
+    var error: Error? { get }
+    var hasError: Bool { get set }
     
     func fetchDessert() async
     func fetchMealDetails(for mealID: String) async
@@ -20,6 +22,9 @@ protocol MealsViewModelProtocol {
 class MealsViewModel: MealsViewModelProtocol {
     let mealService: MealServiceProtocol
     var meals: Meals
+    var error: Error?
+    
+    var hasError: Bool = false
     
     private var currentMealDetails: MealDetails?
     
@@ -29,11 +34,21 @@ class MealsViewModel: MealsViewModelProtocol {
     }
     
     func fetchDessert() async {
-        meals = await mealService.fetchMeals(for: .dessert)
+        do {
+            meals = try await mealService.fetchMeals(for: .dessert)
+        } catch {
+            self.error = error
+            hasError = true
+        }
     }
     
     func fetchMealDetails(for mealID: String) async {
-        currentMealDetails = await mealService.fetchMealDetails(for: mealID)
+        do {
+            currentMealDetails = try await mealService.fetchMealDetails(for: mealID)
+        } catch {
+            self.error = error
+            hasError = true
+        }
     }
     
     //TODO: - Correct optional handling

@@ -12,8 +12,6 @@
 		FCD23C262C7173CA00B53147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD23C252C7173CA00B53147 /* Assets.xcassets */; };
 		FCD23C292C7173CA00B53147 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD23C282C7173CA00B53147 /* Preview Assets.xcassets */; };
 		FCD23C332C7173CA00B53147 /* FetchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C322C7173CA00B53147 /* FetchChallengeTests.swift */; };
-		FCD23C3D2C7173CA00B53147 /* FetchChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C3C2C7173CA00B53147 /* FetchChallengeUITests.swift */; };
-		FCD23C3F2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */; };
 		FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4C2C7177BB00B53147 /* MealsView.swift */; };
 		FCD23C4F2C7177ED00B53147 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */; };
 		FCD23C522C71791B00B53147 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C512C71791B00B53147 /* APIService.swift */; };
@@ -26,6 +24,8 @@
 		FCD23C642C72D3E600B53147 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C632C72D3E600B53147 /* MealDetailView.swift */; };
 		FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C652C72D46200B53147 /* MockMealDetailData.swift */; };
 		FCD23C692C74D46300B53147 /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C682C74D46300B53147 /* YouTubeView.swift */; };
+		FCD23C6C2C75002500B53147 /* MealServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C6B2C75002500B53147 /* MealServiceTests.swift */; };
+		FCD23C6E2C75020500B53147 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C6D2C75020500B53147 /* MockAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,6 @@
 		FCD23C2E2C7173CA00B53147 /* FetchChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD23C322C7173CA00B53147 /* FetchChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeTests.swift; sourceTree = "<group>"; };
 		FCD23C382C7173CA00B53147 /* FetchChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCD23C3C2C7173CA00B53147 /* FetchChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITests.swift; sourceTree = "<group>"; };
-		FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCD23C4C2C7177BB00B53147 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		FCD23C512C71791B00B53147 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		FCD23C632C72D3E600B53147 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		FCD23C652C72D46200B53147 /* MockMealDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealDetailData.swift; sourceTree = "<group>"; };
 		FCD23C682C74D46300B53147 /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
+		FCD23C6B2C75002500B53147 /* MealServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealServiceTests.swift; sourceTree = "<group>"; };
+		FCD23C6D2C75020500B53147 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,6 @@
 			children = (
 				FCD23C202C7173C900B53147 /* FetchChallenge */,
 				FCD23C312C7173CA00B53147 /* FetchChallengeTests */,
-				FCD23C3B2C7173CA00B53147 /* FetchChallengeUITests */,
 				FCD23C1F2C7173C900B53147 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,18 +141,10 @@
 		FCD23C312C7173CA00B53147 /* FetchChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C6A2C74FFED00B53147 /* Services */,
 				FCD23C322C7173CA00B53147 /* FetchChallengeTests.swift */,
 			);
 			path = FetchChallengeTests;
-			sourceTree = "<group>";
-		};
-		FCD23C3B2C7173CA00B53147 /* FetchChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FCD23C3C2C7173CA00B53147 /* FetchChallengeUITests.swift */,
-				FCD23C3E2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift */,
-			);
-			path = FetchChallengeUITests;
 			sourceTree = "<group>";
 		};
 		FCD23C4B2C71747100B53147 /* Meals */ = {
@@ -190,6 +181,7 @@
 				FCD23C602C728E0400B53147 /* APIResponses */,
 				FCD23C5E2C72883500B53147 /* MockMealService.swift */,
 				FCD23C5C2C7287C400B53147 /* MockMealsViewModel.swift */,
+				FCD23C6D2C75020500B53147 /* MockAPIService.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -209,6 +201,14 @@
 				FCD23C682C74D46300B53147 /* YouTubeView.swift */,
 			);
 			path = YouTube;
+			sourceTree = "<group>";
+		};
+		FCD23C6A2C74FFED00B53147 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C6B2C75002500B53147 /* MealServiceTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +286,7 @@
 					};
 					FCD23C372C7173CA00B53147 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = FCD23C1D2C7173C900B53147;
 					};
 				};
@@ -347,6 +348,7 @@
 				FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */,
 				FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */,
 				FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */,
+				FCD23C6E2C75020500B53147 /* MockAPIService.swift in Sources */,
 				FCD23C242C7173C900B53147 /* ContentView.swift in Sources */,
 				FCD23C522C71791B00B53147 /* APIService.swift in Sources */,
 				FCD23C542C7182A900B53147 /* MealService.swift in Sources */,
@@ -362,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD23C6C2C75002500B53147 /* MealServiceTests.swift in Sources */,
 				FCD23C332C7173CA00B53147 /* FetchChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD23C3D2C7173CA00B53147 /* FetchChallengeUITests.swift in Sources */,
-				FCD23C3F2C7173CA00B53147 /* FetchChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MRQ8S568UV;
@@ -620,6 +622,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "../../../../../.Trash/FetchChallengeUITests/FetchChallengeUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FetchChallenge;
@@ -630,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MRQ8S568UV;
@@ -638,6 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "../../../../../.Trash/FetchChallengeUITests/FetchChallengeUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FetchChallenge;

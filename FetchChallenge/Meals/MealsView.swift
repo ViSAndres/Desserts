@@ -19,6 +19,11 @@ struct MealsView: View {
                 BodyView()
             }
             .background(Color("LightGray", bundle: .main))
+            .alert(isPresented: $viewModel.hasError, content: {
+                Alert(title: Text("Error"),
+                      message: Text("There has been a problem loading your data."),
+                      dismissButton: .default(Text("OK")))
+            })
 
         }
         .task {

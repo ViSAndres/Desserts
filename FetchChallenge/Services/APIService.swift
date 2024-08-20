@@ -7,20 +7,23 @@
 
 import Foundation
 
-protocol APIServiceProtocol {
-    func performDataRequest(for url: URL) async throws -> Data
-}
-
 enum NetworkError: Error {
-    case badURL
+    case apiError
+    case invalidResponse
 }
 
-class APIService: APIServiceProtocol {
+class APIService {
     
     func performDataRequest(for url: URL) async throws -> Data {
         let request = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.invalidResponse }
+        
+        if httpResponse.statusCode != 200 { 
+            throw NetworkError.apiError }
+        
         
         return data
     }
