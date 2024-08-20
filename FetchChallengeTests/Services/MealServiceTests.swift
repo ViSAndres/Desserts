@@ -52,5 +52,68 @@ final class MealServiceTests: XCTestCase {
         XCTAssertEqual(correctMeals.meals[0].idMeal, meals.meals[0].idMeal)
     }
     
-
+    func test_fetchMeals_invalidUrl() async throws {
+        givenApiFailureResponse()
+        
+        var failError: NetworkError?
+        
+        do {
+            _ = try await sut.fetchMeals(for: .dessert)
+        } catch {
+            failError = error as! NetworkError
+        }
+        
+        XCTAssertNotNil(failError)
+    }
+    
+    func test_fetchMeals_givenMalFormedData() async throws {
+        givenMalformedResponse()
+        
+        var failError: Error?
+        
+        do {
+            _ = try await sut.fetchMeals(for: .dessert)
+        } catch {
+            failError = error
+        }
+        
+        XCTAssertNotNil(failError)
+    }
+    
+    func test_fetchMealDetails_SuccessfulFetch() async throws {
+        var correctMealDetails = mockMealDetails()
+        
+        givenApiSuccessResponse(with: mockMealDetailData())
+        
+        var mealDetails = try await sut.fetchMealDetails(for: "53049")
+        XCTAssertEqual(correctMealDetails.meals[0].strMeal, mealDetails.meals[0].strMeal)
+    }
+    
+    func test_fetchMeaDetails_invalidUrl() async throws {
+        givenApiFailureResponse()
+        
+        var failError: NetworkError?
+        
+        do {
+            _ = try await sut.fetchMealDetails(for: "53049")
+        } catch {
+            failError = error as! NetworkError
+        }
+        
+        XCTAssertNotNil(failError)
+    }
+    
+    func test_fetchMealDetails_givenMalFormedData() async throws {
+        givenMalformedResponse()
+        
+        var failError: Error?
+        
+        do {
+            _ = try await sut.fetchMealDetails(for: "53049")
+        } catch {
+            failError = error
+        }
+        
+        XCTAssertNotNil(failError)
+    }
 }

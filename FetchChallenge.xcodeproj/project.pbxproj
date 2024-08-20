@@ -36,13 +36,6 @@
 			remoteGlobalIDString = FCD23C1D2C7173C900B53147;
 			remoteInfo = FetchChallenge;
 		};
-		FCD23C392C7173CA00B53147 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCD23C162C7173C900B53147 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD23C1D2C7173C900B53147;
-			remoteInfo = FetchChallenge;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +46,6 @@
 		FCD23C282C7173CA00B53147 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCD23C2E2C7173CA00B53147 /* FetchChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD23C322C7173CA00B53147 /* FetchChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeTests.swift; sourceTree = "<group>"; };
-		FCD23C382C7173CA00B53147 /* FetchChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD23C4C2C7177BB00B53147 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		FCD23C4E2C7177ED00B53147 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		FCD23C512C71791B00B53147 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -85,13 +77,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCD23C352C7173CA00B53147 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,7 +94,6 @@
 			children = (
 				FCD23C1E2C7173C900B53147 /* FetchChallenge.app */,
 				FCD23C2E2C7173CA00B53147 /* FetchChallengeTests.xctest */,
-				FCD23C382C7173CA00B53147 /* FetchChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,24 +233,6 @@
 			productReference = FCD23C2E2C7173CA00B53147 /* FetchChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FCD23C372C7173CA00B53147 /* FetchChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCD23C482C7173CA00B53147 /* Build configuration list for PBXNativeTarget "FetchChallengeUITests" */;
-			buildPhases = (
-				FCD23C342C7173CA00B53147 /* Sources */,
-				FCD23C352C7173CA00B53147 /* Frameworks */,
-				FCD23C362C7173CA00B53147 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FCD23C3A2C7173CA00B53147 /* PBXTargetDependency */,
-			);
-			name = FetchChallengeUITests;
-			productName = FetchChallengeUITests;
-			productReference = FCD23C382C7173CA00B53147 /* FetchChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,11 +248,6 @@
 					};
 					FCD23C2D2C7173CA00B53147 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = FCD23C1D2C7173C900B53147;
-					};
-					FCD23C372C7173CA00B53147 = {
-						CreatedOnToolsVersion = 15.4;
-						LastSwiftMigration = 1540;
 						TestTargetID = FCD23C1D2C7173C900B53147;
 					};
 				};
@@ -306,7 +267,6 @@
 			targets = (
 				FCD23C1D2C7173C900B53147 /* FetchChallenge */,
 				FCD23C2D2C7173CA00B53147 /* FetchChallengeTests */,
-				FCD23C372C7173CA00B53147 /* FetchChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -322,13 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FCD23C2C2C7173CA00B53147 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCD23C362C7173CA00B53147 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,13 +322,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCD23C342C7173CA00B53147 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -383,11 +329,6 @@
 			isa = PBXTargetDependency;
 			target = FCD23C1D2C7173C900B53147 /* FetchChallenge */;
 			targetProxy = FCD23C2F2C7173CA00B53147 /* PBXContainerItemProxy */;
-		};
-		FCD23C3A2C7173CA00B53147 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCD23C1D2C7173C900B53147 /* FetchChallenge */;
-			targetProxy = FCD23C392C7173CA00B53147 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -609,47 +550,6 @@
 			};
 			name = Release;
 		};
-		FCD23C492C7173CA00B53147 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MRQ8S568UV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "../../../../../.Trash/FetchChallengeUITests/FetchChallengeUITests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchChallenge;
-			};
-			name = Debug;
-		};
-		FCD23C4A2C7173CA00B53147 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MRQ8S568UV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "../../../../../.Trash/FetchChallengeUITests/FetchChallengeUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -676,15 +576,6 @@
 			buildConfigurations = (
 				FCD23C462C7173CA00B53147 /* Debug */,
 				FCD23C472C7173CA00B53147 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCD23C482C7173CA00B53147 /* Build configuration list for PBXNativeTarget "FetchChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCD23C492C7173CA00B53147 /* Debug */,
-				FCD23C4A2C7173CA00B53147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
