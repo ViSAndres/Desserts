@@ -63,9 +63,16 @@ struct MealDetailView: View {
             Text("Instructions")
                 .font(.title2)
             
+            // TODO: Handle no instructions
             Text(meal.strInstructions ?? "Idk just cook it")
             
             IngredientsView()
+            
+            if let url = meal.getYouTubeEmbed() {
+                YouTubeView(url: url)
+                    .frame(width: 300, height: 200)
+                    .padding()
+            }
         }
         .padding()
     }
@@ -82,7 +89,7 @@ struct MealDetailView: View {
                 if let measurement = ingredients[key] {
                     if key != "" {
                         if measurement != " " {
-                            Text("\(measurement) of \(key)")
+                            Text("\(key): \(measurement)")
                         } else { Text(key) }
                     }
                 }

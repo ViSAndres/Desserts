@@ -25,6 +25,7 @@
 		FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C612C728E3500B53147 /* MockMealsData.swift */; };
 		FCD23C642C72D3E600B53147 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C632C72D3E600B53147 /* MealDetailView.swift */; };
 		FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C652C72D46200B53147 /* MockMealDetailData.swift */; };
+		FCD23C692C74D46300B53147 /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C682C74D46300B53147 /* YouTubeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FCD23C612C728E3500B53147 /* MockMealsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsData.swift; sourceTree = "<group>"; };
 		FCD23C632C72D3E600B53147 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		FCD23C652C72D46200B53147 /* MockMealDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealDetailData.swift; sourceTree = "<group>"; };
+		FCD23C682C74D46300B53147 /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		FCD23C202C7173C900B53147 /* FetchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FCD23C672C74D44A00B53147 /* YouTube */,
 				FCD23C5B2C72874000B53147 /* Mock */,
 				FCD23C552C71853B00B53147 /* Models */,
 				FCD23C502C71781B00B53147 /* Services */,
@@ -198,6 +201,14 @@
 				FCD23C652C72D46200B53147 /* MockMealDetailData.swift */,
 			);
 			path = APIResponses;
+			sourceTree = "<group>";
+		};
+		FCD23C672C74D44A00B53147 /* YouTube */ = {
+			isa = PBXGroup;
+			children = (
+				FCD23C682C74D46300B53147 /* YouTubeView.swift */,
+			);
+			path = YouTube;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			files = (
 				FCD23C642C72D3E600B53147 /* MealDetailView.swift in Sources */,
 				FCD23C622C728E3500B53147 /* MockMealsData.swift in Sources */,
+				FCD23C692C74D46300B53147 /* YouTubeView.swift in Sources */,
 				FCD23C5F2C72883500B53147 /* MockMealService.swift in Sources */,
 				FCD23C662C72D46200B53147 /* MockMealDetailData.swift in Sources */,
 				FCD23C5D2C7287C400B53147 /* MockMealsViewModel.swift in Sources */,

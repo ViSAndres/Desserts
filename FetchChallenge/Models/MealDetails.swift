@@ -92,4 +92,13 @@ public struct Details: Codable {
         
         return ingredients
     }
+    
+    func getYouTubeEmbed() -> URL? {
+        guard let strYoutube = strYoutube, let pre = strYoutube.firstIndex(of: "=") else { return nil }
+        
+        let videoId = String(strYoutube[strYoutube.index(after: pre)...])
+        let urlStr = "https://www.youtube.com/embed/\(videoId)"
+        
+        return URL(string: urlStr)
+    }
 }
