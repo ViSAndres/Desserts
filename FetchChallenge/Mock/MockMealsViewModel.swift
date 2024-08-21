@@ -33,7 +33,7 @@ public class MockMealsViewModel: MealsViewModelProtocol {
         }
     }
     
-    func getCurrentMealDetails() -> MealDetails {
-        return self.currentMealDetails ?? mockMealDetails()
+    func getCurrentMealDetails() -> MealDetails? {
+        return self.currentMealDetails
     }
 }

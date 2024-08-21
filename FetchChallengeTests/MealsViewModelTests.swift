@@ -76,7 +76,9 @@ final class MealsViewModelTests: XCTestCase {
         
         await sut.fetchMealDetails(for: "1234")
         
-        XCTAssertEqual(sut.getCurrentMealDetails().meals, mockData.meals)
+        guard let resultMealDetails = sut.getCurrentMealDetails() else { return XCTFail() }
+        
+        XCTAssertEqual(resultMealDetails.meals, mockData.meals)
     }
     
     func test_fetchMealDetails_throwsError() async {

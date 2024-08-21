@@ -26,6 +26,7 @@
 		FCD23C6C2C75002500B53147 /* MealServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C6B2C75002500B53147 /* MealServiceTests.swift */; };
 		FCD23C6E2C75020500B53147 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD23C6D2C75020500B53147 /* MockAPIService.swift */; };
 		FCF14FE42C752C1100478844 /* MealsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF14FE32C752C1100478844 /* MealsViewModelTests.swift */; };
+		FCF14FE82C76551C00478844 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF14FE72C76551C00478844 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		FCD23C6B2C75002500B53147 /* MealServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealServiceTests.swift; sourceTree = "<group>"; };
 		FCD23C6D2C75020500B53147 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		FCF14FE32C752C1100478844 /* MealsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModelTests.swift; sourceTree = "<group>"; };
+		FCF14FE72C76551C00478844 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 		FCD23C202C7173C900B53147 /* FetchChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FCD23C672C74D44A00B53147 /* YouTube */,
+				FCF14FE52C7654FC00478844 /* Shared */,
 				FCD23C5B2C72874000B53147 /* Mock */,
 				FCD23C552C71853B00B53147 /* Models */,
 				FCD23C502C71781B00B53147 /* Services */,
@@ -193,6 +195,23 @@
 				FCD23C6B2C75002500B53147 /* MealServiceTests.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FCF14FE52C7654FC00478844 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FCF14FE62C76550900478844 /* Error */,
+				FCD23C672C74D44A00B53147 /* YouTube */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FCF14FE62C76550900478844 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				FCF14FE72C76551C00478844 /* ErrorView.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +329,7 @@
 				FCD23C592C723F2900B53147 /* MealDetails.swift in Sources */,
 				FCD23C572C7185AB00B53147 /* Meals.swift in Sources */,
 				FCD23C4D2C7177BB00B53147 /* MealsView.swift in Sources */,
+				FCF14FE82C76551C00478844 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

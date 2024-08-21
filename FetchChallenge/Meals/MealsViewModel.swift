@@ -15,7 +15,7 @@ protocol MealsViewModelProtocol {
     
     func fetchMeals(for category: MealCategory) async 
     func fetchMealDetails(for mealID: String) async
-    func getCurrentMealDetails() -> MealDetails
+    func getCurrentMealDetails() -> MealDetails?
 }
 
 @Observable
@@ -51,8 +51,7 @@ class MealsViewModel: MealsViewModelProtocol {
         }
     }
     
-    //TODO: - Correct optional handling
-    func getCurrentMealDetails() -> MealDetails {
-        return self.currentMealDetails ?? mockMealDetails()
+    func getCurrentMealDetails() -> MealDetails? {
+        return self.currentMealDetails
     }
 }

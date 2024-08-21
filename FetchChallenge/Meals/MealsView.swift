@@ -45,7 +45,11 @@ struct MealsView: View {
             }
         }
         .navigationDestination(isPresented: $shouldNavigate) {
-            MealDetailView(meal: viewModel.getCurrentMealDetails().meals[0])
+            if let mealDetails = viewModel.getCurrentMealDetails() {
+                MealDetailView(meal: mealDetails.meals[0])
+            } else {
+                ErrorView()
+            }
         }
     }
     
@@ -82,7 +86,7 @@ struct MealsView: View {
                 
                 Spacer()
             }
-            .frame(width: 150, height: 225)
+            .frame(width: 150, height: 200)
             .background(.white)
             .border(.gray, width: 0.5)
         }
