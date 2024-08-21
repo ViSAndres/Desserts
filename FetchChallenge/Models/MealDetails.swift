@@ -101,4 +101,10 @@ public struct Details: Codable, Hashable {
         
         return URL(string: urlStr)
     }
+    
+    func getTags() -> [Substring]? {
+        guard let strTags = strTags else { return nil }
+        let arr = strTags.split(separator: ",")
+        return arr
+    }
 }

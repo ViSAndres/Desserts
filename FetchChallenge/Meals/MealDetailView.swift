@@ -28,7 +28,6 @@ struct MealDetailView: View {
             )
             .padding(.horizontal, 20)
         }
-        // TODO: Add colors to xcode
         .background(Color("LightGray", bundle: .main))
     }
     
@@ -42,7 +41,19 @@ struct MealDetailView: View {
             }
     }
     
-    
+    @ViewBuilder
+    func BodyView() -> some View {
+        VStack(alignment: .leading) {
+            TagsView()
+            
+            IngredientsView()
+            
+            InstructionsView()
+            
+            MediaView()
+        }
+        .padding()
+    }
     
     @ViewBuilder
     func ImageView() -> some View {
@@ -57,23 +68,25 @@ struct MealDetailView: View {
     }
     
     @ViewBuilder
-    func BodyView() -> some View {
-        VStack(alignment: .leading) {
-            Text("Instructions")
-                .font(.title2)
-            
-            // TODO: Handle no instructions
-            Text(meal.strInstructions ?? "Idk just cook it")
-            
-            IngredientsView()
-            
-            if let url = meal.getYouTubeEmbed() {
-                YouTubeView(url: url)
-                    .frame(width: 300, height: 200)
-                    .padding()
+    func TagsView() -> some View {
+        if let tags = meal.getTags() {
+            let rows = [GridItem(.fixed(30))]
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: rows) {
+                    ForEach(tags, id: \.self) {tag in
+                            Text(tag)
+                            .padding(.all, 7)
+                            .background(
+                                    Capsule()
+                                        .strokeBorder(Color.gray,lineWidth: 0.8)
+                                        .background(.lightGray)
+                                        .clipped()
+                                )
+                                .clipShape(Capsule())
+                    }
+                }
             }
         }
-        .padding()
     }
     
     @ViewBuilder
@@ -94,7 +107,29 @@ struct MealDetailView: View {
                 }
             }
         }
-        .padding(.top, 10)
+        .padding(.vertical, 5)
+    }
+    
+    @ViewBuilder
+    func InstructionsView() -> some View {
+        VStack(alignment: .leading) {
+            Text("Instructions")
+                .font(.title2)
+            
+            if let instructions = meal.strInstructions {
+                Text(instructions)
+            }
+            
+        }
+    }
+    
+    @ViewBuilder
+    func MediaView() -> some View {
+        if let url = meal.getYouTubeEmbed() {
+            YouTubeView(url: url)
+                .frame(width: 300, height: 200)
+                .padding()
+        }
     }
 }
 
