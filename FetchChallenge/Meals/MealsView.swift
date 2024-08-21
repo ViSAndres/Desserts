@@ -27,7 +27,7 @@ struct MealsView: View {
 
         }
         .task {
-            await viewModel.fetchDessert()
+            await viewModel.fetchMeals(for: .dessert)
         }
     }
     

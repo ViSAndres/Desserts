@@ -44,11 +44,11 @@ final class MealServiceTests: XCTestCase {
     }
 
     func test_fetchMeals_SuccessfulFetch() async throws {
-        var correctMeals = mockMeals()
+        let correctMeals = mockMeals()
         
         givenApiSuccessResponse(with: mockMealsData())
         
-        var meals = try await sut.fetchMeals(for: .dessert)
+        let meals = try await sut.fetchMeals(for: .dessert)
         XCTAssertEqual(correctMeals.meals[0].idMeal, meals.meals[0].idMeal)
     }
     
@@ -81,11 +81,11 @@ final class MealServiceTests: XCTestCase {
     }
     
     func test_fetchMealDetails_SuccessfulFetch() async throws {
-        var correctMealDetails = mockMealDetails()
+        let correctMealDetails = mockMealDetails()
         
         givenApiSuccessResponse(with: mockMealDetailData())
         
-        var mealDetails = try await sut.fetchMealDetails(for: "53049")
+        let mealDetails = try await sut.fetchMealDetails(for: "53049")
         XCTAssertEqual(correctMealDetails.meals[0].strMeal, mealDetails.meals[0].strMeal)
     }
     

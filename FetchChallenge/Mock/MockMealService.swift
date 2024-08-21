@@ -8,12 +8,26 @@
 import Foundation
 
 class MockMealService: MealServiceProtocol {
-    func fetchMeals(for catagory: MealCategory) async -> Meals {
-        return mockMeals()
+    var requestMeals = Meals(meals: [])
+    var requestMealDetails = MealDetails(meals: [])
+    var requestSuccess: Bool = true
+    var reqquestError: NetworkError = NetworkError.apiError
+    
+    func fetchMeals(for catagory: MealCategory) async throws -> Meals {
+        
+        if requestSuccess {
+            return requestMeals
+        }
+        
+        throw reqquestError
     }
     
-    func fetchMealDetails(for id: String) async -> MealDetails {
-        return mockMealDetails()
+    func fetchMealDetails(for id: String) async throws -> MealDetails {
+        if requestSuccess {
+            return requestMealDetails
+        }
+        
+        throw reqquestError
     }
 }
 

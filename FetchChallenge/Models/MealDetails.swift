@@ -11,7 +11,7 @@ public struct MealDetails: Codable {
     let meals: [Details]
 }
 
-public struct Details: Codable {
+public struct Details: Codable, Hashable {
     let idMeal: String
     let strMeal: String
     let strDrinkAlternate: String?

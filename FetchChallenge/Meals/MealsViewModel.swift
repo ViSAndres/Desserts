@@ -13,7 +13,7 @@ protocol MealsViewModelProtocol {
     var error: Error? { get }
     var hasError: Bool { get set }
     
-    func fetchDessert() async
+    func fetchMeals(for category: MealCategory) async 
     func fetchMealDetails(for mealID: String) async
     func getCurrentMealDetails() -> MealDetails
 }
@@ -33,9 +33,9 @@ class MealsViewModel: MealsViewModelProtocol {
         self.meals = meals
     }
     
-    func fetchDessert() async {
+    func fetchMeals(for category: MealCategory) async {
         do {
-            meals = try await mealService.fetchMeals(for: .dessert)
+            meals = try await mealService.fetchMeals(for: category)
         } catch {
             self.error = error
             hasError = true

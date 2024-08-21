@@ -17,7 +17,7 @@ public class MockMealsViewModel: MealsViewModelProtocol {
     
     private var currentMealDetails: MealDetails?
     
-    func fetchDessert() async {
+    func fetchMeals(for category: MealCategory) async  {
         do {
             meals = try await mealService.fetchMeals(for: .dessert)
         } catch {
