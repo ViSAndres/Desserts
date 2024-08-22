@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FCD23C1E2C7173C900B53147 /* FetchChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD23C1E2C7173C900B53147 /* Desserts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desserts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD23C212C7173C900B53147 /* FetchChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeApp.swift; sourceTree = "<group>"; };
 		FCD23C232C7173C900B53147 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCD23C252C7173CA00B53147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		FCD23C1F2C7173C900B53147 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCD23C1E2C7173C900B53147 /* FetchChallenge.app */,
+				FCD23C1E2C7173C900B53147 /* Desserts.app */,
 				FCD23C2E2C7173CA00B53147 /* FetchChallengeTests.xctest */,
 			);
 			name = Products;
@@ -231,7 +231,7 @@
 			);
 			name = FetchChallenge;
 			productName = FetchChallenge;
-			productReference = FCD23C1E2C7173C900B53147 /* FetchChallenge.app */;
+			productReference = FCD23C1E2C7173C900B53147 /* Desserts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FCD23C2D2C7173CA00B53147 /* FetchChallengeTests */ = {
@@ -494,7 +494,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Desserts;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -523,7 +523,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = visandres.FetchChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Desserts;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
