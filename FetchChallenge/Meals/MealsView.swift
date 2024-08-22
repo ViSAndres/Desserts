@@ -18,7 +18,7 @@ struct MealsView: View {
                 
                 BodyView()
             }
-            .background(Color("LightGray", bundle: .main))
+            .background(.lighterGray)
             .alert(isPresented: $viewModel.hasError, content: {
                 Alert(title: Text("Error"),
                       message: Text("There has been a problem loading your data."),
@@ -87,8 +87,12 @@ struct MealsView: View {
                 Spacer()
             }
             .frame(width: 150, height: 200)
+            .cornerRadius(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(.lightGray, lineWidth: 0.8)
+            )
             .background(.white)
-            .border(.gray, width: 0.5)
         }
     }
 }

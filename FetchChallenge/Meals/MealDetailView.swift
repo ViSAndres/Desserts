@@ -24,11 +24,11 @@ struct MealDetailView: View {
             .cornerRadius(16)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color("LightGray", bundle: .main), lineWidth: 1)
+                    .stroke(.lightGray, lineWidth: 0.8)
             )
             .padding(.horizontal, 20)
         }
-        .background(Color("LightGray", bundle: .main))
+        .background(.lighterGray)
     }
     
     @ViewBuilder
@@ -78,8 +78,8 @@ struct MealDetailView: View {
                             .padding(.all, 7)
                             .background(
                                     Capsule()
-                                        .strokeBorder(Color.gray,lineWidth: 0.8)
-                                        .background(.lightGray)
+                                        .strokeBorder(.lightGray,lineWidth: 0.8)
+                                        .background(.lighterGray)
                                         .clipped()
                                 )
                                 .clipShape(Capsule())
